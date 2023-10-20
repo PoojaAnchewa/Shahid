@@ -1,0 +1,8 @@
+install.packages("e1701")
+library(e1071)
+data<-read.csv("F:\\dataset\\weather.csv" , header=TRUE)
+weather_df = as.data.frame(data)
+weather_df
+Naive_Bayes_Model = naiveBayes(play~.,data=weather_df)
+Naive_Bayes_Model
+NB_Prediction = predict(Naive_Bayes_Model,weather_df)
